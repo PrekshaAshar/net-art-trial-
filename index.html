@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Touch-enabled Book/Page Flip Effect</title>
+  <title>Touch-enabled Book/Page Flip Effect Example</title>
   <link rel="stylesheet" href="./style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
@@ -13,30 +13,60 @@
 <body>
   <div class="scene">
     <article class="book">
-      <!-- Example Pages -->
+      <!-- Cover Page -->
       <section class="page active">
         <div class="front">
+          <div id="carbon-block"></div>
           <h1>Welcome</h1>
           <p>Swipe or click to flip pages.</p>
         </div>
-        <div class="back"></div>
-      </section>
-
-      <section class="page">
-        <div class="front">
-          <h1>Page 2</h1>
-        </div>
         <div class="back">
-          <h1>Page 3</h1>
+          <h1>Back Cover</h1>
         </div>
       </section>
 
+      <!-- Page 1 -->
       <section class="page">
         <div class="front">
-          <h1>Page 4</h1>
+          <h1>Click on Image</h1>
+          <div class="center">
+            <a href="https://devriend.submarinechannel.com/en/?ref=onepagelove" class="image-button">
+              <img src="images/Devriend website image .jpeg" alt="Click Me">
+            </a>
+          </div>
         </div>
         <div class="back">
-          <h1>End</h1>
+          <h1>Back of Page 1</h1>
+        </div>
+      </section>
+
+      <!-- Page 2 -->
+      <section class="page">
+        <div class="front">
+          <h1>Click on Image</h1>
+          <div class="center">
+            <a href="https://www.sbs.com.au/theboat/" class="image-button">
+              <img src="images/The Boat website image.jpeg" alt="Click Me">
+            </a>
+          </div>
+        </div>
+        <div class="back">
+          <h1>Back of Page 2</h1>
+        </div>
+      </section>
+
+      <!-- Page 3 -->
+      <section class="page">
+        <div class="front">
+          <h1>Click on Image</h1>
+          <div class="center">
+            <a href="https://www.atterwasch.net/#folge-02" class="image-button">
+              <img src="images/Atterwasch website image.jpeg" alt="Click Me">
+            </a>
+          </div>
+        </div>
+        <div class="back">
+          <h1>End of Book</h1>
         </div>
       </section>
     </article>
