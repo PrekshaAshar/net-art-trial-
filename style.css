@@ -1,23 +1,15 @@
-html {
-  height: 100%;
-  overflow: hidden;
-}
 body {
-  background: rgb(48, 45, 45);
+  background: #30302d;
   margin: 0;
-  width: 100%;
-  height: 100%;
-}
-
-h1 {
-  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .scene {
-    width: 45%;
-    height: 90%;
-    margin: 5% 5% 5% 50%;
-
+  width: 300px;
+  height: 400px;
   perspective: 1000px;
 }
 
@@ -25,170 +17,38 @@ h1 {
   position: relative;
   width: 100%;
   height: 100%;
-
   transform-style: preserve-3d;
+  transition: transform 1.5s;
 }
 
 .page {
-  cursor: pointer;
   position: absolute;
-  color: black;
   width: 100%;
   height: 100%;
-
-  transition: 1.5s transform;
   transform-style: preserve-3d;
   transform-origin: left center;
+  transition: transform 1s ease-in-out;
+  background: #fff;
+  border: 1px solid #ccc;
 }
-.front,
-.back {
-  position: absolute;
 
+.page .front,
+.page .back {
+  position: absolute;
   width: 100%;
   height: 100%;
-  padding: 10% 5% 5%;
-  box-sizing: border-box;
-
   backface-visibility: hidden;
-  background: (linear, 0% 0%, 100% 100%, from(#FFFFFF), to(#CCCCCC));
-  background: linear-gradient(to bottom right, #fff, #ccc);
 }
-.back {
+
+.page .back {
   transform: rotateY(180deg);
 }
 
-.page.active {
-  z-index: 1;
-}
 .page.flipped {
   transform: rotateY(-180deg);
 }
-.page.flipped:last-of-type {
-  z-index: 1;
-}
 
-p {
-  text-indent: 1em;
-  line-height: 1.7;
+.page.active {
+  z-index: 2;
 }
-
-.qr {
-  margin: 50px auto;
-  max-width: 50%;
-}
-.qr img {
-  display: block;
-}
-
-.center {
-  text-align: center;
-}
-
-/*cover page*/
-.front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 10% 5% 5%;
-  box-sizing: border-box;
-  backface-visibility: hidden;
-  background: (linear, 0% 0%, 100% 100%, from(#FFFFFF), to(#CCCCCC));
-  background: linear-gradient(to bottom right, #fff, #ccc);
-}
-
-/* Cover */
-.page:nth-of-type(1) .front {
-  background-image: url(images/Net\ Art-1.jpeg);
-  background-size: cover;
-  background-position: center;
-}
-
-/* 1 */
-.page:nth-of-type(1) .back {
-  background-image: url(images/Net\ Art-6.jpeg);
-  background-size: cover;
-  background-position: center;
-}
-
-/* 2 */
-.page:nth-of-type(2) .front {
-  background-image: url(images/Net\ Art-5.jpeg);
-  background-size: cover;
-  background-position: center;
-}
-
-/* 3 */
-.page:nth-of-type(2) .back {
-  background-image: url(images/Net\ Art-2.jpeg);
-  background-size: cover;
-  background-position: center;
-}
-
-/* 4 */
-.page:nth-of-type(3) .front {
-  background-image: url();
-  background-size: cover;
-  background-position: center;
-  background-color: white;
-  
-}
-
-/* 5 */
-.page:nth-of-type(3) .back {
-  background-image: url(images/Net\ Art-3.jpeg);
-  background-size: cover;
-  background-position: center;
-}
-
-/* 6 */
-.page:nth-of-type(4) .front {
-  background-image: url();
-  background-size: cover;
-  background-position: center;
-  background-color: white;
-}
-
-/* 7 */
-.page:nth-of-type(4) .back {
-  background-image: url(images/Net\ Art-4.jpeg);
-  background-size: cover;
-  background-position: center;
-}
-
-/* 8 */
-.page:nth-of-type(5) .front {
-  background-image: url();
-  background-size: cover;
-  background-position: center;
-  background-color: white;
-}
-
-/* End Page */
-.page:nth-of-type(5) .back {
-  background-image: url(images/Net\ Art-7.jpeg);
-  background-size: cover;
-  background-position: center;
-}
-
-/* Buttons */
-.center {
-  align-items: center;
-}
-
-.image-button img {
-  display: block;
-  max-width: 100%;
-  height: 15cm;
-  width: auto;
-  cursor: pointer;
- 
-  transition: transform 0.3s, box-shadow 0.3s;
-  position: center;
-}
-
-.image-button img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 
