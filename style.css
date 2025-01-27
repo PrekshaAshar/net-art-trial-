@@ -1,69 +1,85 @@
 html, body {
-  margin: 0;
-  padding: 0;
   height: 100%;
+  margin: 0;
   overflow: hidden;
+}
+body {
   background: rgb(48, 45, 45);
 }
-
 h1 {
   text-align: center;
-  color: white;
 }
-
 .scene {
-  width: 50%;
-  height: 80%;
-  margin: 10% auto;
+  width: 45%;
+  height: 90%;
+  margin: 5% auto;
   perspective: 1000px;
 }
-
 .book {
   position: relative;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 1s;
 }
-
 .page {
+  cursor: pointer;
   position: absolute;
   width: 100%;
   height: 100%;
-  transform-origin: left center;
+  transition: 1.5s transform;
   transform-style: preserve-3d;
-  transition: transform 1s ease;
+  transform-origin: left center;
 }
-
 .front, .back {
   position: absolute;
   width: 100%;
   height: 100%;
+  padding: 10% 5% 5%;
+  box-sizing: border-box;
   backface-visibility: hidden;
   background: linear-gradient(to bottom right, #fff, #ccc);
 }
-
 .back {
   transform: rotateY(180deg);
 }
-
 .page.active {
   z-index: 1;
 }
-
 .page.flipped {
   transform: rotateY(-180deg);
 }
-
+.center {
+  text-align: center;
+}
 .image-button img {
   display: block;
   max-width: 100%;
-  margin: 20px auto;
-  cursor: pointer;
-  transition: transform 0.3s;
+  height: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .image-button img:hover {
   transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
+/* Background Images */
+.page:nth-of-type(1) .front {
+  background-image: url('images/Net Art-1.jpeg');
+}
+.page:nth-of-type(1) .back {
+  background-image: url('images/Net Art-6.jpeg');
+}
+.page:nth-of-type(2) .front {
+  background-image: url('images/Net Art-5.jpeg');
+}
+.page:nth-of-type(2) .back {
+  background-image: url('images/Net Art-2.jpeg');
+}
+.page:nth-of-type(3) .back {
+  background-image: url('images/Net Art-3.jpeg');
+}
+.page:nth-of-type(4) .back {
+  background-image: url('images/Net Art-4.jpeg');
+}
+.page:nth-of-type(5) .back {
+  background-image: url('images/Net Art-7.jpeg');
+}
