@@ -1,21 +1,17 @@
 $('.book')
-  .on('click', '.active', function() {
-    $(this).removeClass('active').addClass('flipped').next('.page').addClass('active');
-  })
-  .on('click', '.flipped', function() {
-    $(this).removeClass('flipped').addClass('active').prev('.page').removeClass('active');
-  });
+  .on('click', '.active', nextPage)
+  .on('click', '.flipped', prevPage);
 
-$('.book').hammer().on('swipeleft', function() {
-  $('.active').removeClass('active').addClass('flipped').next('.page').addClass('active');
-});
+$('.book').hammer().on('swipeleft', nextPage);
+$('.book').hammer().on('swiperight', prevPage);
 
-$('.book').hammer().on('swiperight', function() {
-  $('.flipped:last').removeClass('flipped').addClass('active').prev('.page').removeClass('active');
-});
-
-
-    
-    
+function prevPage() {
+  $('.flipped').last().removeClass('flipped').addClass('active')
+    .siblings('.page').removeClass('active');
 }
+function nextPage() {
+  $('.active').removeClass('active').addClass('flipped')
+    .next('.page').addClass('active').siblings();
+}
+
 
