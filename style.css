@@ -98,28 +98,28 @@ p {
 
 /* Cover */
 .page:nth-of-type(1) .front {
-  background-image: url(images/Net\ Art-1.jpeg);
+  background-image: url(Net\ Art-1.jpeg);
   background-size: cover;
   background-position: center;
 }
 
 /* 1 */
 .page:nth-of-type(1) .back {
-  background-image: url(images/Net\ Art-6.jpeg);
+  background-image: url(Net\ Art-6.jpeg);
   background-size: cover;
   background-position: center;
 }
 
 /* 2 */
 .page:nth-of-type(2) .front {
-  background-image: url(images/Net\ Art-5.jpeg);
+  background-image: url(Net\ Art-5.jpeg);
   background-size: cover;
   background-position: center;
 }
 
 /* 3 */
 .page:nth-of-type(2) .back {
-  background-image: url(images/Net\ Art-2.jpeg);
+  background-image: url(Net\ Art-2.jpeg);
   background-size: cover;
   background-position: center;
 }
@@ -135,7 +135,7 @@ p {
 
 /* 5 */
 .page:nth-of-type(3) .back {
-  background-image: url(images/Net\ Art-3.jpeg);
+  background-image: url(Net\ Art-3.jpeg);
   background-size: cover;
   background-position: center;
 }
@@ -150,7 +150,7 @@ p {
 
 /* 7 */
 .page:nth-of-type(4) .back {
-  background-image: url(images/Net\ Art-4.jpeg);
+  background-image: url(Net\ Art-4.jpeg);
   background-size: cover;
   background-position: center;
 }
@@ -165,7 +165,7 @@ p {
 
 /* End Page */
 .page:nth-of-type(5) .back {
-  background-image: url(images/Net\ Art-7.jpeg);
+  background-image: url(Net\ Art-7.jpeg);
   background-size: cover;
   background-position: center;
 }
